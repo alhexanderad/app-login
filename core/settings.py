@@ -109,9 +109,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
   BASE_DIR / 'static',
-#   BASE_DIR / 'person' / 'static',
-#   BASE_DIR / 'constancy' / 'static',
-#   BASE_DIR / 'professsion' / 'static',
+  BASE_DIR / 'actors' / 'static',
+  BASE_DIR / 'movies' / 'static',
+  BASE_DIR / 'users' / 'static',
 #   BASE_DIR / 'printout' / 'static',
 ]
 
