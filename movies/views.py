@@ -3,8 +3,10 @@ from django.urls import reverse_lazy
 from django.views.generic import FormView
 from movies.models import Film, Commercial
 from movies.forms import MovieSelectForm, FilmModelForm, CommercialModelForm
-
-class MovieSelectFormView(FormView):
+#Linea de codigo para el ingreso de Login en las apps
+from django.contrib.auth.mixins import LoginRequiredMixin
+#Para el ingreso de la pagina principal de movies
+class MovieSelectFormView(LoginRequiredMixin,FormView):
   form_class = MovieSelectForm
   template_name = 'movies/main.html'
   success_url = reverse_lazy('movies:add-movie-view')
@@ -14,7 +16,7 @@ class MovieSelectFormView(FormView):
     print(self.request.POST.get('movie').lower().capitalize())
     return super().post(*args, **kwargs)
 
-class AddMovieFormView(FormView):
+class AddMovieFormView(LoginRequiredMixin, FormView):
   template_name = 'movies/add.html'
   success_url = reverse_lazy('home')
 

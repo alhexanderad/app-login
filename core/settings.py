@@ -89,6 +89,10 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+'''Se inserto codigo para el ingreso de usuarios'''
+LOGIN_URL= 'login'
+LOGOUT_REDIRECT_URL = '/admin/'
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
