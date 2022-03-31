@@ -13,7 +13,7 @@
         <h3>{{date_today}}</h3>
       </div>
       <div class="four wide column">
-        <button class="ui button">Change Password</button>
+        <a href="{% url 'users:password-change-view' %}"><button class="ui button">Change Password</button></a>
         <br>
         <a href="{% url 'logout' %}"><button class="ui button negative">Logout</button></a>
       </div>

@@ -10,7 +10,8 @@ admin.site.enable_nav_sidebar = False
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home' ),
-    path('movies/', include('movies.urls', namespace='movies') ),
+    path('movies/', include('movies.urls', namespace='movies')),
+    path('users/', include('users.urls', namespace='users')),
     path('login/', login_view, name='login'),
     path('logout/', logout_view, name='logout'),
 ]
